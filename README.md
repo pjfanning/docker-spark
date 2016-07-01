@@ -6,12 +6,12 @@ The base Hadoop Docker image is also available as an official [Docker image](htt
 
 ##Pull the image from Docker Repository
 ```
-docker pull pjfanning/spark:1.6.1
+docker pull pjfanning/spark:1.6.2
 ```
 
 ## Building the image
 ```
-docker build --rm -t pjfanning/spark:1.6.1 .
+docker build --rm -t pjfanning/spark:1.6.2 .
 ```
 
 ## Running the image
@@ -20,16 +20,16 @@ docker build --rm -t pjfanning/spark:1.6.1 .
 * in your /etc/hosts file add $(boot2docker ip) as host 'sandbox' to make it easier to access your sandbox UI
 * open yarn UI ports when running container
 ```
-docker run -it -p 8088:8088 -p 8042:8042 -p 4040:4040 -h sandbox pjfanning/spark:1.6.1 bash
+docker run -it -p 8088:8088 -p 8042:8042 -p 4040:4040 -h sandbox pjfanning/spark:1.6.2 bash
 ```
 or
 ```
-docker run -d -h sandbox pjfanning/spark:1.6.1 -d
+docker run -d -h sandbox pjfanning/spark:1.6.2 -d
 ```
 
 ## Versions
 ```
-Hadoop 2.6.0 and Apache Spark v1.6.1 on Centos 
+Hadoop 2.6.0 and Apache Spark v1.6.2 on Centos 
 ```
 
 ## Testing
@@ -67,7 +67,7 @@ spark-submit \
 --driver-memory 1g \
 --executor-memory 1g \
 --executor-cores 1 \
-$SPARK_HOME/lib/spark-examples-1.6.1-hadoop2.6.0.jar
+$SPARK_HOME/lib/spark-examples-1.6.2-hadoop2.6.0.jar
 ```
 
 Estimating Pi (yarn-client mode):
@@ -80,7 +80,7 @@ spark-submit \
 --driver-memory 1g \
 --executor-memory 1g \
 --executor-cores 1 \
-$SPARK_HOME/lib/spark-examples-1.6.1-hadoop2.6.0.jar
+$SPARK_HOME/lib/spark-examples-1.6.2-hadoop2.6.0.jar
 ```
 
 ### Submitting from the outside of the container
