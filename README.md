@@ -6,12 +6,12 @@ The base Hadoop Docker image is also available as an official [Docker image](htt
 
 ##Pull the image from Docker Repository
 ```
-docker pull pjfanning/spark:1.6.2
+docker pull pjfanning/docker-spark:1.6.2
 ```
 
 ## Building the image
 ```
-docker build --rm -t pjfanning/spark:1.6.2 .
+docker build --rm -t pjfanning/docker-spark:1.6.2 .
 ```
 
 ## Running the image
@@ -20,11 +20,11 @@ docker build --rm -t pjfanning/spark:1.6.2 .
 * in your /etc/hosts file add $(boot2docker ip) as host 'sandbox' to make it easier to access your sandbox UI
 * open yarn UI ports when running container
 ```
-docker run -it -p 8088:8088 -p 8042:8042 -p 4040:4040 -h sandbox pjfanning/spark:1.6.2 bash
+docker run -it -p 8088:8088 -p 8042:8042 -p 4040:4040 -h sandbox pjfanning/docker-spark:1.6.2 bash
 ```
 or
 ```
-docker run -d -h sandbox pjfanning/spark:1.6.2 -d
+docker run -d -h sandbox pjfanning/docker-spark:1.6.2 -d
 ```
 
 ## Versions
